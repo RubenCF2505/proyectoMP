@@ -1,0 +1,75 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/cppFiles/class.cc to edit this template
+ */
+
+/* 
+ * File:   Pelicula.cpp
+ * Author: usuario
+ * 
+ * Created on 2 de mayo de 2025, 16:32
+ */
+
+#include <sstream>
+#include "Pelicula.h"
+using namespace std;
+
+Pelicula::Pelicula(int id, string titulo, Fecha lanzamiento, Genero genero) {
+    this->id = id;
+    this->titulo = titulo;
+    this->fechaLanzamiento = lanzamiento;
+    this->genero = genero;
+}
+
+Pelicula::Pelicula(const Pelicula& orig) {
+    this->id = orig.id;
+    this->titulo = orig.titulo;
+    this->fechaLanzamiento = orig.fechaLanzamiento;
+    this->genero = orig.genero;
+}
+
+Pelicula::Pelicula() {
+    this->id = -1;
+    this->titulo = " ";
+    this->fechaLanzamiento = Fecha();
+    this->genero = GENERICO;
+}
+
+ostream& operator<<(ostream& flujo, Genero genero) {
+    switch (genero) {
+        case DRAMA:
+            flujo << "DRAMA";
+            break;
+        case COMEDIA:
+            flujo << "COMEDIA";
+            break;
+        case SUSPENSE:
+            flujo << "SUSPENSE";
+            break;
+        case CIENCIA_FICCION:
+            flujo << "CIENCIA_FICCION";
+            break;
+        case ANIMACION:
+            flujo << "ANIMACION";
+            break;
+        case ACCION:
+            flujo << "ACCION";
+            break;
+        case GENERICO:
+            flujo << "GENERICO";
+    }
+    return flujo;
+}
+
+Pelicula::~Pelicula() {
+
+}
+
+string Pelicula::toString() {
+    ostringstream oss;
+    oss << "Titulo: " << titulo
+            << " Fecha de lanzamiento: " << fechaLanzamiento.toString()
+            << " Género: " << genero;
+    return oss.str();
+}
+
