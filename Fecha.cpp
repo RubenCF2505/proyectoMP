@@ -38,7 +38,7 @@ bool Fecha::esBisiesto(int anio) {
 
 void Fecha::setDia(int dia, int mes, int anio) {
     //los meses que tienen dias distintos de 31 son:
-    int meses[]{2, 4, 6, 9, 11};
+    int meses[]={2, 4, 6, 9, 11};
     int maxDia = 31;
     for (int i = 0; i< sizeof (meses); i++) {
         if (mes == meses[i]) {

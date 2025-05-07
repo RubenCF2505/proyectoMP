@@ -76,9 +76,9 @@ Pelicula** Usuario::getMeGusta() {
 }
 
 Usuario::~Usuario() {
-    borrarMemoria(meGusta, maxMeGusta);
-    borrarMemoria(noMeGusta, maxNoMeGusta);
-    borrarMemoria(criticas, maxCriticas);
+    borrarMemoria(meGusta, numMeGusta);
+    borrarMemoria(noMeGusta, numNoMeGusta);
+    borrarMemoria(criticas, numCriticas);
 }
 
 int Usuario::getNumMeGusta() {
