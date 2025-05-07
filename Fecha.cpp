@@ -26,8 +26,7 @@ Fecha::Fecha() {
     this->anio = 2001;
 }
 
-Fecha::~Fecha() {
-}
+
 
 void Fecha::setAnio(int anio) {
     anio > 0 ? this->anio = anio : this->anio = -1;
@@ -38,7 +37,7 @@ bool Fecha::esBisiesto(int anio) {
 }
 
 void Fecha::setDia(int dia, int mes, int anio) {
-    //los meses distintos de 31 son:
+    //los meses que tienen dias distintos de 31 son:
     int meses[]{2, 4, 6, 9, 11};
     int maxDia = 31;
     for (int i = 0; i< sizeof (meses); i++) {
@@ -59,7 +58,7 @@ void Fecha::setMes(int mes) {
 }
 
 string Fecha::toString() {
-    return to_string(dia) + " / " + to_string(mes) + " / " + to_string(anio);
+    return to_string(dia) + "/" + to_string(mes) + "/" + to_string(anio);
 }
 
 

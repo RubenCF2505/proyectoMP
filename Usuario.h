@@ -83,7 +83,7 @@ public:
     void setNombre(string nombre);
 
 
-    Pelicula* getMeGusta();
+    Pelicula** getMeGusta();
     void setSexo(Sexo sexo);
 private:
 

@@ -24,7 +24,6 @@ public:
     Critica(float valoracion, string descripcion, Pelicula * pelicula);
     Critica();
     Critica(const Critica& orig);
-    virtual ~Critica();
 private:
 
 };

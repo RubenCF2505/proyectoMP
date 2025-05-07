@@ -27,7 +27,4 @@ Critica::Critica() {
 Critica::Critica(const Critica& orig) {
 }
 
-Critica::~Critica() {
-    pelicula=nullptr;
-}
 

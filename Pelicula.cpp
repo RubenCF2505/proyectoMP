@@ -61,9 +61,6 @@ ostream& operator<<(ostream& flujo, Genero genero) {
     return flujo;
 }
 
-Pelicula::~Pelicula() {
-
-}
 
 string Pelicula::toString() {
     ostringstream oss;

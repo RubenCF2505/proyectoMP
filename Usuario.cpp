@@ -71,8 +71,8 @@ Usuario::Usuario() {
 
 }
 
-Pelicula* Usuario::getMeGusta() {
-    return *meGusta;
+Pelicula** Usuario::getMeGusta() {
+    return meGusta;
 }
 
 Usuario::~Usuario() {
@@ -121,6 +121,7 @@ bool Usuario::aniadirMeGusta(Pelicula* pelicula) {
 bool Usuario::eliminarMeGusta(Pelicula* pelicula) {
     int aux = -1;
     bool encontrado = buscarLista(meGusta, pelicula, numMeGusta, aux);
+
 
     if (encontrado) {
         eliminarLista(meGusta, numMeGusta, maxMeGusta, aux);
@@ -179,18 +180,6 @@ void Usuario::aniadirLista(T**& Lista, T* objeto, int & limite, int &incremento)
 }
 
 template<typename T>
-bool Usuario::buscarLista(T** Lista, T* objeto, int &limite, int &indice) {
-    bool encontrado = false;
-    for (int i = 0; i < limite; i++) {
-        if (Lista[i] == objeto && encontrado == false) {
-            encontrado = true;
-            indice = i;
-        }
-    }
-    return encontrado;
-}
-
-template<typename T>
 bool Usuario::buscarLista(T** Lista, T* objeto, int &limite) {
     bool encontrado = false;
     for (int i = 0; i < limite; i++) {
@@ -202,15 +191,16 @@ bool Usuario::buscarLista(T** Lista, T* objeto, int &limite) {
 }
 
 template<typename T>
-void Usuario::borrarMemoria(T**& Lista, int& limite) {
+bool Usuario::buscarLista(T** Lista, T* objeto, int &limite, int &indice) {
+    indice = -1;
+    bool encontrado = false;
     for (int i = 0; i < limite; i++) {
-        if (Lista[i] != nullptr) {
-            delete Lista[i];
+        if (Lista[i] == objeto && encontrado == false) {
+            encontrado = true;
+            indice = i;
         }
     }
-    delete[] Lista;
-    Lista = nullptr;
-    limite = 0;
+    return encontrado;
 }
 
 template<typename T>
@@ -221,11 +211,24 @@ void Usuario::eliminarLista(T**& Lista, int& decremento, int& limite, int indice
         Lista[i] = Lista[i + 1];
     }
 
+    Lista[decremento - 1] = nullptr;
+
     decremento--;
 
     if (decremento < limite / 2) {
         reducirEspacio(Lista, limite);
     }
+}
+
+template<typename T>
+void Usuario::borrarMemoria(T**& Lista, int& limite) {
+    for (int i = 0; i < limite; i++) {
+        if (Lista[i] != nullptr) {
+            Lista[i] = nullptr;
+        }
+    }
+    Lista = nullptr;
+    limite = 0;
 }
 
 template <typename T>
@@ -241,12 +244,12 @@ void Usuario::ampliarEspacio(T**& lista, int& limite) {
 
 template <typename T>
 void Usuario::reducirEspacio(T**& lista, int& limite) {
-    int nuevoLimite = 0;
-    limite / 2 > 5 ? nuevoLimite = limite / 2 : nuevoLimite = 5;
+    int nuevoLimite = limite / 2;
     T** aux = new T*[nuevoLimite];
-    for (int i = 0; i < limite; i++) {
+    for (int i = 0; i < nuevoLimite; i++) {
         aux[i] = lista[i];
     }
+    delete[] lista; 
     lista = aux;
     limite = nuevoLimite;
 }

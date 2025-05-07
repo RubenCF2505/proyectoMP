@@ -32,7 +32,6 @@ public:
     Pelicula();
     Pelicula(const Pelicula& orig);
     string toString();
-    virtual ~Pelicula();
 private:
 
 };

@@ -28,7 +28,6 @@ class Fecha {
 public:
     Fecha(int dia, int mes, int anio);
     Fecha();
-    virtual ~Fecha();
     string toString();
 private:
     void setDia(int dia);

@@ -50,11 +50,11 @@ int main() {
     assert(ruben_banano.aniadirMeGusta(&matrix)==true);
     assert(ruben_banano.getNumMeGusta()==6);
     assert(ruben_banano.getMaxMeGusta()==10);
-
+    
     cout << "Peliculas preferidas de " << ruben_banano.getNombre() + " " << ruben_banano.getApellidos() << endl;
     
     for (int i=0 ; i < ruben_banano.getNumMeGusta(); i++) {
-        cout << ruben_banano.getMeGusta()[i].toString() << endl;
+        cout << ruben_banano.getMeGusta()[i]->toString() << endl;
     }
     cout << "----------------------------------------------" << endl;
 
@@ -71,7 +71,7 @@ int main() {
     cout << "Peliculas preferidas de " << ruben_banano.getNombre() + " " << ruben_banano.getApellidos() << endl;
     
     for (int i=0 ; i < ruben_banano.getNumMeGusta(); i++) {
-        cout << ruben_banano.getMeGusta()[i].toString() << endl;
+        cout << ruben_banano.getMeGusta()[i]->toString() << endl;
     }
     cout << "----------------------------------------------" << endl;
 
@@ -79,12 +79,7 @@ int main() {
 
     ruben_banano.aniadirCritica(&critica_trainspotting);
     assert(ruben_banano.getNumCriticas()==1);
+
     assert(ruben_banano.getMaxCriticas()==5);
-
-
-
-
-
-
 
 }
