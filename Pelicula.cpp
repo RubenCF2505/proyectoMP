@@ -35,38 +35,9 @@ Pelicula::Pelicula() {
     this->genero = GENERICO;
 }
 
-ostream& operator<<(ostream& flujo, Genero genero) {
-    switch (genero) {
-        case DRAMA:
-            flujo << "DRAMA";
-            break;
-        case COMEDIA:
-            flujo << "COMEDIA";
-            break;
-        case SUSPENSE:
-            flujo << "SUSPENSE";
-            break;
-        case CIENCIA_FICCION:
-            flujo << "CIENCIA_FICCION";
-            break;
-        case ANIMACION:
-            flujo << "ANIMACION";
-            break;
-        case ACCION:
-            flujo << "ACCION";
-            break;
-        case GENERICO:
-            flujo << "GENERICO";
-    }
-    return flujo;
-}
 
 
 string Pelicula::toString() {
-    ostringstream oss;
-    oss << "Titulo: " << titulo
-            << " Fecha de lanzamiento: " << fechaLanzamiento.toString()
-            << " Género: " << genero;
-    return oss.str();
+    return "Titulo: " + titulo + " Fecha de lanzamiento: " + fechaLanzamiento.toString() + " Género: " +to_string(genero);
 }
 
