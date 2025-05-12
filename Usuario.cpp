@@ -235,7 +235,7 @@ template <typename T>
 void Usuario::ampliarEspacio(T**& lista, int& limite) {
     int nuevoLimite = limite * 2;
     T** aux = new T*[nuevoLimite];
-    for (int i = 0; i < limite; i++) {
+    for (int i = 0; i < nuevoLimite; i++) {
         aux[i] = lista[i];
     }
     lista = aux;
