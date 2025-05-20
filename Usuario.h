@@ -15,6 +15,7 @@
 #include <string>
 #include "Pelicula.h"
 #include "Critica.h"
+#include "Util.h"
 
 
 using namespace std;
@@ -48,6 +49,7 @@ public:
     Usuario(int id, string nombre, string apellidos, string email, Sexo sexo);
 
     Usuario(const Usuario& orig);
+    Usuario(string linea);
     virtual ~Usuario();
     int getId();
     string getNombre();
@@ -87,20 +89,7 @@ public:
     void setSexo(Sexo sexo);
 private:
 
-    template <typename T>
-    void ampliarEspacio(T**& lista, int& limite);
-    template <typename T>
-    void reducirEspacio(T**& lista, int& limite);
-    template <typename T>
-    void aniadirLista(T**& Lista, T* objeto, int& limite, int &incremento);
-    template <typename T>
-    void eliminarLista(T**& Lista, int& limite, int &decremento, int indice);
-    template <typename T>
-    bool buscarLista(T** Lista, T* objeto, int &limite, int &indice);
-    template <typename T>
-    bool buscarLista(T** Lista, T* objeto, int &limite);
-    template <typename T>
-    void borrarMemoria(T**& Lista, int& limite);
+    
 };
 
 

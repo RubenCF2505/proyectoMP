@@ -29,6 +29,7 @@ public:
     Fecha(int dia, int mes, int anio);
     Fecha();
     string toString();
+    int getAnio();
 private:
     void setDia(int dia);
     void setMes(int mes);

@@ -1,0 +1,24 @@
+1;Cadena Perpetua;24/02/1995;Drama
+2;El Padrino;20/10/1972;DRAMA
+3;El padrino: Parte II;13/10/1975;Drama
+4;El caballero oscuro;13/08/2008;Accion
+5;12 hombres sin piedad;10/04/1957;Drama
+6;La lista de Schindler;04/03/1994;DRAMA
+7;El senior de los anillos: el retorno del rey;17/12/2003;Ciencia Ficcion
+8;Pulp Fiction;13/01/1995;Suspense
+9;El bueno, el feo y el malo;07/08/1968;Suspense
+10;El senior de los anillos: la comunidad del anillo;19/12/2001;Ciencia Ficcion
+11;El club de la lucha;05/11/1999;Suspense
+12;Forrest Gump;23/09/1994;Comedia
+13;Origen;06/08/2010;Ciencia Ficcion
+14;El imperio contraataca;03/10/1980;Suspense
+15;El senior de los anillos: las dos torres;18/12/2002;Suspense
+16;Matrix;23/06/1999;Ciencia Ficcion
+17;Uno de los nuestros;19/10/1990;Accion
+18;Alguien volo sobre el nido del cuco;07/10/1976;Drama
+19;Los siete samurais;26/04/1954;Drama
+20;Seven;10/01/1996;Suspense
+21;Ciudad de Dios;31/01/2003;Drama
+22;La vida es bella;26/02/1999;Drama
+23;El silencio de los corderos;06/09/1991;Suspense
+24;Que bello es vivir;07/01/1947;Drama

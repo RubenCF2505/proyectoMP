@@ -37,6 +37,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Critica.o \
 	${OBJECTDIR}/Fecha.o \
+	${OBJECTDIR}/ListaPeliculas.o \
+	${OBJECTDIR}/ListaUsuarios.o \
 	${OBJECTDIR}/Pelicula.o \
 	${OBJECTDIR}/Usuario.o \
 	${OBJECTDIR}/main.o
@@ -75,6 +77,16 @@ ${OBJECTDIR}/Fecha.o: Fecha.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Fecha.o Fecha.cpp
+
+${OBJECTDIR}/ListaPeliculas.o: ListaPeliculas.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaPeliculas.o ListaPeliculas.cpp
+
+${OBJECTDIR}/ListaUsuarios.o: ListaUsuarios.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaUsuarios.o ListaUsuarios.cpp
 
 ${OBJECTDIR}/Pelicula.o: Pelicula.cpp
 	${MKDIR} -p ${OBJECTDIR}

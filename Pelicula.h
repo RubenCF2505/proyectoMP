@@ -17,7 +17,7 @@
 
 enum Genero {
     DRAMA,
-    COMEDIA, SUSPENSE, CIENCIA_FICCION, ANIMACION, ACCION, GENERICO      
+    COMEDIA, SUSPENSE, CIENCIA_FICCION, ANIMACION, ACCION, GENERICO
 };
 using namespace std;
 
@@ -27,6 +27,11 @@ class Pelicula {
     Fecha fechaLanzamiento;
     Genero genero;
 public:
+    Fecha getFechaLanzamiento() const;
+
+    int getId() const;
+
+    string getTitulo() const;
 
     Pelicula(int id, string titulo, Fecha lanzamiento, Genero genero);
     Pelicula();

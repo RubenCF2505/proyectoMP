@@ -35,9 +35,32 @@ Pelicula::Pelicula() {
     this->genero = GENERICO;
 }
 
+Fecha Pelicula::getFechaLanzamiento() const {
+    return fechaLanzamiento;
+}
 
+string generoToString(Genero genero) {
+    const string nombres[] = {
+        "DRAMA",
+        "COMEDIA",
+        "SUSPENSE",
+        "CIENCIA FICCION",
+        "ANIMACION",
+        "ACCION"
+    };
+
+    return nombres[genero];
+}
+
+int Pelicula::getId() const {
+    return id;
+}
+
+string Pelicula::getTitulo() const {
+    return titulo;
+}
 
 string Pelicula::toString() {
-    return "Titulo: " + titulo + " Fecha de lanzamiento: " + fechaLanzamiento.toString() + " Género: " +to_string(genero);
+    return "Titulo: " + titulo + " Fecha de lanzamiento: " + fechaLanzamiento.toString() + " Género: " + generoToString(genero);
 }
 

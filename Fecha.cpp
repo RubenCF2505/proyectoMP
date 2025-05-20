@@ -26,6 +26,9 @@ Fecha::Fecha() {
     this->anio = 2001;
 }
 
+int Fecha::getAnio() {
+    return anio;
+}
 
 
 void Fecha::setAnio(int anio) {
